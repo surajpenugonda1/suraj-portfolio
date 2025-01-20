@@ -1,18 +1,14 @@
+.computer-man {
+    width: 30%;
+}
+
 .typewriter {
     overflow: hidden;
     border-right: .15em solid orange;
     white-space: nowrap;
     margin: 0 auto;
     letter-spacing: .15em;
-    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-}
-
-.typewriter.playing {
-    animation-play-state: running;
-}
-
-.typewriter.stopped {
-    animation-play-state: paused;
+    animation: typing 3.5s steps(40, end) infinite, blink-caret .75s step-end infinite;
 }
 
 
