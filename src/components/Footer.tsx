@@ -3,7 +3,7 @@
 function Footer() {
 
     return (
-        <footer className="flex sticky bottom-0 m-3">
+        <footer className="flex bottom-0 m-3">
             <div className="flex-1 p-3">
                 <p className="text-center"> Designed and Developed by Suraj </p>
 
