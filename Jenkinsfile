@@ -1,5 +1,13 @@
 pipeline {
     agent any
+
+    tools {
+        nodejs 'NodeJS'
+    }
+
+    triggers {
+        githubPush()
+    }   
     
     stages {
         stage('Build') {
@@ -12,16 +20,6 @@ pipeline {
             steps {
                 echo 'Testing..'
                 sh 'npm test'     // or your test command
-            }
-        }
-        stage('Report') {
-            steps {
-                githubNotify(
-                    credentialsId: 'github-token-porfolio',
-                    status: currentBuild.result,
-                    context: 'Jenkins/Test',
-                    description: 'Tests completed'
-                )
             }
         }
     }
