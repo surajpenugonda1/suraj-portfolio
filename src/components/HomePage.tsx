@@ -4,13 +4,13 @@ import { useEffect, useState } from 'react';
 
 function HomePage() {
 
-    const differentTexts: string[] = ['Software Developer', 'Full Stack Developer', 'FrontEnd Developer', 'Backend Developer'];
-    const [showText, setShowText] = useState(differentTexts[0])
+    // const differentTexts: string[] = ['Software Developer', 'Full Stack Developer', 'FrontEnd Developer', 'Backend Developer'];
+    // const [showText, setShowText] = useState(differentTexts[0])
     const [number, setNumber] = useState(0)
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setShowText(differentTexts[number % differentTexts.length])
+            // setShowText(differentTexts[number % differentTexts.length])
             setNumber(number+1)
         }, 3000)
         return () => clearInterval(interval);
